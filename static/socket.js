@@ -1,5 +1,6 @@
 let socket = io.connect(window.origin +"/restaurant")
 let room = window.location.pathname.split("/")[2]
+//visit seahawk as this is the hard-coded uid for the device
 
 socket.on("connect",()=>{socket.send(room)})
 
